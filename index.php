@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<META NAME="description" CONTENT="This is designed to be a quick and easy way to either confirm your hiragana / katakana skills or to learn them from scratch.">
+<META NAME="keywords" CONTENT="japanese, hiragana, katakana, study, learn, lemon">
+<META NAME="robot" CONTENT="index,follow">
+<META NAME="copyright" CONTENT="Copyright © 2010 Steven Huf">
+<META NAME="author" CONTENT="Steven Huf">
+<title>テスト。</title>
+<?php
+
+$fh = fopen("log.txt", 'a');
+fwrite($fh, $_SERVER["REMOTE_ADDR"]);
+fwrite($fh, " - ");
+fwrite($fh, $_SERVER["HTTP_USER_AGENT"]);
+fwrite($fh, "\n");
+fclose($fh);
+?>
+<script src="jtest.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="jtest.css"/>
+</head><body onload="run(1)">
+<p id="score">Score: 0/0. (0%) (Not doing to well yet...)<br/>Streak: 0 Best Streak: 0.</p>
+  <p id="letter" title="If you do not recognise this character at all, take a stab and you will be corrected anyway.">Loading</p>
+<form name="guess" method="dance" action="javascript:run();return 1;">
+  <p>
+    <input type="text" name="guessbox" size="3" title="Enter your guess here."/>
+    <input type="button" value="Verify" onclick="run(0)" title="Click here to verify."/>
+  </p>
+  <p>
+    <label><input name="hkb" type="radio" id="hkbh" value="h" checked="checked" />Hiragana</label><br/>
+    <label><input name="hkb" type="radio" id="hkbk" value="k"/>Katakana</label><br/>
+    <label><input name="hkb" type="radio" id="hkbb" value="b"/>Both</label><br/>
+  </p>
+  <p>
+  Note: Anything chosen here will have everything above included in the mix. Also, 'yoink yoink' characters (such as で） are not included.
+  <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="covera" checked="checked"/>
+      Vowels</label>
+    <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="coverk"/>
+      K Series</label>
+    <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="covers"/>
+      S Series</label>
+    <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="covert"/>
+      T Series</label>
+    <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="covern"/>
+      N Series</label>
+    <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="coverh"/>
+      H Series</label>
+    <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="coverm"/>
+      M Series</label>
+    <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="covery"/>
+      Y Series</label>
+    <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="coverr"/>
+      R Series</label>
+    <br/>
+    <label>
+      <input type="radio" name="cover" value="radio" id="coverall"/>
+      Everything!</label>
+    <br/>
+  </p>
+</form>
+<a href="hiraganakatakana.pdf" title="$12.50 plus postage and handling.">Click here for a cheat sheet.</a>
+
+<h6 id="warning" title="Congrats, you found the secret message. I wonder how long until I forget it exists...">Notes:<br/>
+  Works best in Chrome.<br/>
+  Works a bit in FireFox. (You cannot press Enter, lest you wish to start from scratch)<br/>
+  Does not work at all in IE. (Script seems to get stuck in an infinite loop... Go figure... Die in a fire IE...) <br/>
+  Suprisingly works epically on iphone! Lol, mac...<br/><br/>
+  That aside, this will 'learn' which characters you have trouble with and annoy you with them. This effect is reset when you close or refresh the page though, so keep it open as long as you can. On that note, it does not require an active Internet connection. If you load the page then go to Hawaii, it will still work.<br/>
+  One day I might make this more pretty - but really can't be bothered at the moment. Maybe I'll do it whilst procrastinating about actually learning the language...<br/>
+  And for those who are wondering, this page is now xhtml complient except for one tag. I left it in because I find it amusing. Now that's power. Bonus point if you can find it.</h6>
+
+</body></html>
