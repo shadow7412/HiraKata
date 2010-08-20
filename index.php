@@ -7,15 +7,6 @@
 <META NAME="copyright" CONTENT="Copyright © 2010 Steven Huf">
 <META NAME="author" CONTENT="Steven Huf">
 <title>テスト。</title>
-<?php
-
-$fh = fopen("log.txt", 'a');
-fwrite($fh, $_SERVER["REMOTE_ADDR"]);
-fwrite($fh, " - ");
-fwrite($fh, $_SERVER["HTTP_USER_AGENT"]);
-fwrite($fh, "\n");
-fclose($fh);
-?>
 <script src="jtest.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="jtest.css"/>
 </head><body onload="run(1)">
