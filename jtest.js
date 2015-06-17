@@ -79,8 +79,8 @@ function run(firstrun){
 	  streak++;
 	  correctans[sr][nr]=correctans[sr][nr]+100;
 
-	}else if(theguess==""){
-		alert("Please enter the answer into the textbox!")
+	}else if(theguess===""){
+		alert("Please enter the answer into the textbox!");
 		return false;
 	} else {
 	  total++;
@@ -119,7 +119,6 @@ function run(firstrun){
 //Generates the character that shall be tested on.
 var repicked=0;
 var skippedletters="";
-var i;
 while (i!=100){
   sr = Math.floor(Math.random() * cap);
   if (document.guess.hkb[0].checked){
@@ -139,7 +138,7 @@ while (i!=100){
 	}
   repicked++;
   skippedletters+=letters[sr][nr];
-  if (!oldone==letters[sr][nr]){
+  if (oldone!==letters[sr][nr]){
 	  	i++;
 	}
 }
