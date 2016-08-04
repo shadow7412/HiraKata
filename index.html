@@ -14,8 +14,8 @@
   <p id="letter" title="If you do not recognise this character at all, take a stab and you will be corrected anyway.">Loading</p>
 <form name="guess" method="dance" onsubmit="run(); return false;">
   <p>
-    <input type="text" name="guessbox" size="3" title="Enter your guess here."/>
-    <input type="button" value="Verify" onclick="run(0)" title="Click here to verify."/>
+    <input type="text" name="guessbox" pattern="[a-z]+" size="3" title="Enter your guess here."/>
+    <input type="submit" value="Verify" title="Click here to verify."/>
   </p>
   <p>
     <label><input name="hkb" type="radio" id="hkbh" value="h" checked="checked" />Hiragana</label><br/>
@@ -63,7 +63,7 @@
     <br/>
     <label>
       <input type="radio" name="cover" value="radio" id="coverall"/>
-      Everything!</label>
+      W Series (Everything!)</label>
     <br/>
   </p>
 </form>
